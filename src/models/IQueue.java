@@ -1,5 +1,25 @@
 package models;
 
+/**
+ * An IQueue is an interface for a queue data structure. Queues follow the FIFO (First In, First Out)
+ * principle, meaning that the first element added will be the first one removed.
+ *
+ * All queues must support adding elements to the back with enqueue, removing elements from the front
+ * with dequeue, and viewing the front element with element (at a minimum).
+ *
+ * @initialization_ensures: self will be initialized as an empty queue.
+ *
+ * @defines:
+ * self: The queue
+ * size: The number of elements currently in the queue
+ * front: The first element in the queue
+ * back: The last element added to the queue
+ *
+ * @constraints:
+ * size >= 0
+ * The next item to be removed from self is the first item that was added
+ */
+
 public interface IQueue<E>
 {
     /**
@@ -12,6 +32,8 @@ public interface IQueue<E>
      * @post self = #self with element added to the end of the queue AND size = #size + 1
      */
     public void enqueue(E element);
+
+    E dequeue(E element);
 
     /**
      * Return the first element of the queue without removing it, returning null if the queue is empty.
