@@ -6,5 +6,19 @@ import java.util.ArrayList;
 //primary methods
 public class ArrayListQueue<E> implements IQueue<E> {
 
-    private ArrayList<E> list;
+    private ArrayList<E> list = new ArrayList<>();
+
+
+
+
+
+
+
+
+
+
+    //Ignore this, I need it for writing your autograder tests
+    public String toString() {
+        return list.toString();
+    }
 }

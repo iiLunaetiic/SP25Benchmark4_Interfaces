@@ -6,7 +6,15 @@ import java.util.LinkedList;
 //primary methods
 public class LinkedListQueue<E> implements IQueue<E>
 {
-    private LinkedList<E> list;
+    private LinkedList<E> list = new LinkedList<>();
 
 
+
+
+
+
+    //Ignore this, I need it for writing your autograder tests
+    public String toString() {
+        return list.toString();
+    }
 }
